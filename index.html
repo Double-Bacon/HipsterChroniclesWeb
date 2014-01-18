@@ -1,12 +1,99 @@
 ﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title></title>
-</head>
-<body>
-    Bienvenidos a la página web del videojuego The Hipster Chronicles<br />
-    <a href="iteracion1.html">Primera iteración</a><br />
-    <a href="iteracion2.html">Segunda iteración</a><br />
+    <title>The Hipster Chronicles</title>
+    <link rel="stylesheet" type="text/css" href="layout.css" />
+    <link rel="stylesheet" type="text/css" href="menu.css" />
 
+    <script type="text/javascript">
+        var shownDiv = "inicio";
+
+        function showDiv(div) {
+            //Mostrar y ocultar los divs.
+            document.getElementById(shownDiv).style.visibility="hidden";
+            document.getElementById(div).style.visibility = "visible";
+
+            //Desactivar el li correcto.
+            if (shownDiv == "iteracion1" || shownDiv == "iteracion2" || shownDiv == "iteracion3")
+                document.getElementById("desarrolloLi").setAttribute("class", "");
+            
+            else 
+                document.getElementById(shownDiv + "Li").setAttribute("class", "");
+            
+
+            //Activar el li correcto.
+            if (div == "iteracion1" || div == "iteracion2" || div == "iteracion3") 
+                document.getElementById("desarrolloLi").setAttribute("class", "active");
+            
+            else
+                document.getElementById(div + "Li").setAttribute("class", "active");
+
+            
+            shownDiv = div;
+        }
+
+    </script>
+</head>
+<body>    
+    <header>
+        <center>
+            Bienvenidos a la página web del videojuego The Hipster Chronicles
+        </center>
+    </header>
+    <div id="cssmenu">
+        <ul>
+            <li id="inicioLi" class="active">
+                <a onclick="showDiv('inicio')"><span>Inicio</span></a>
+            </li>
+            <li id="descripcionLi">
+                <a onclick="showDiv('descripcion')"><span>El juego</span></a>
+            </li>
+            <li id="quienesSomosLi">
+                <a onclick="showDiv('quienesSomos')">Quienes somos</a>
+            </li>
+            <li id="desarrolloLi">
+                <a><span>Desarrollo</span></a>
+                <ul>
+                    <li><a onclick ="showDiv('iteracion1')"><span>Primera iteración</span></a></li>
+                    <li><a onclick ="showDiv('iteracion2')"><span>Segunda iteración</span></a></li>
+                    <li><a onclick ="showDiv('iteracion3')"><span>Tercera iteración</span></a></li>
+                </ul>
+            </li>
+            <li id="contactoLi">
+                <a onclick="showDiv('contacto')">Contacto</a>
+            </li>
+        </ul>
+
+    </div>
+    <div id="inicio" class="info">
+        INFORMACION DE INICIO
+    </div>
+
+    <div id="descripcion" style="visibility : hidden" class="info">
+        INFORMACION DEL JUEGO
+    </div>
+
+    <div id="quienesSomos" style="visibility : hidden" class="info">
+        INFORMACION DE QUIENES SOMOS
+    </div>
+
+    <div id="iteracion1" style="visibility : hidden" class="info">
+        INFORMACION DE LA PRIMERA ITERACION
+        <button onclick="location.href='iteracion1.html'">Jugar</button>
+    </div>
+
+    <div id="iteracion2" style="visibility : hidden" class="info">
+        INFORMACION DE LA SEGUNDA ITERACION
+        <button onclick="location.href='iteracion2.html'">Jugar</button>
+    </div>
+
+    <div id="iteracion3" style="visibility : hidden" class="info">
+        INFORMACION DE LA TERCERA ITERACION
+        <button onclick="location.href='iteracion3.html'">Jugar</button>
+    </div>
+
+    <div id="contacto" style="visibility : hidden" class="info">
+        INFORMACION DE CONTACTO
+    </div>
 </body>
 </html>
