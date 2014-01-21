@@ -1,7 +1,7 @@
 #cssmenu ul {
   margin: 0;
   padding: 7px 6px 0;
-  background: #7d7d7d url(images/overlay.png) repeat-x 0 -110px;
+  background: #555555 url(images/overlay.png) repeat-x 0 -110px;
   line-height: 100%;
   border-radius: 1em;
   font: normal 0.5333333333333333em Arial, Helvetica, sans-serif;

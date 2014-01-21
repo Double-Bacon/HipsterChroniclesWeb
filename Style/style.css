@@ -1,0 +1,31 @@
+html{
+
+	background-color:black;
+	background-image:url("../images/fondo oeste2.jpg");
+	background-repeat: no-repeat;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	height:100%;
+} 
+body{
+	margin: auto;
+	width:980px;  
+	height:100%;
+
+}
+
+#cabecera{
+ 
+	#background-color:#FFD200;
+	height:150px;
+	max-width:980;
+	  
+} 
+ 
+.info{ 
+	height:400px;
+	background-color:RGBA(255,255,255,0.5);
+	margin-top:10px;
+}
