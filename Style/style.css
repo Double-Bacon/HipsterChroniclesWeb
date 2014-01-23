@@ -8,6 +8,7 @@ html{
 	-o-background-size: cover;
 	background-size: cover;
 	height:100%;
+	font-family: cursive;
 } 
 body{
 	margin: auto;
@@ -21,12 +22,14 @@ body{
 	#background-color:#FFD200;
 	height:150px;
 	max-width:980;
-	  
+	   
 } 
  
-.info{ 
-	height:400px;
+.info{  
+	height:360px;
 	background-color:RGBA(255,255,255,0.5);
 	margin-top:10px;
+	padding:20px;
 }
+
 
